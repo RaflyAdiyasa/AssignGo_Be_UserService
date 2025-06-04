@@ -1,13 +1,13 @@
 export default {
   development: {
-    username: 'assigngo_user ',
+    username: 'assigngo_user',
     password: 'pass123',
     database: 'assigngo',
     host: '34.70.188.206',
     dialect: 'postgres'
   },
   test: {
-    username: 'assigngo_user ',
+    username: 'assigngo_user',
     password: 'pass123',
     database: 'assigngo',
     host: '34.70.188.206',

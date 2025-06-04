@@ -12,7 +12,7 @@ export const findUserByNim = async (nim) => {
 
 export const findUserById = async (id) => {
   return await User.findByPk(id, {
-    attributes: ['id', 'nim', 'username', 'isAdmin']
+    attributes: ['id', 'nim', 'username', 'isAdmin', 'refresh_token']
   });
 };
 
