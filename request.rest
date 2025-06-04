@@ -1,0 +1,74 @@
+@baseUrl = http://localhost:3001/api/users
+@refreshToken = a
+@accessToken = a
+@adminAccessToken = a
+@adminRefreshToken = a
+
+### Register User
+POST {{baseUrl}}/register
+Content-Type: application/json
+
+{
+  "nim": "123456789",
+  "username": "johndoe",
+  "password": "password123",
+  "isAdmin": false
+}
+
+### Register Admin
+POST {{baseUrl}}/register
+Content-Type: application/json
+
+{
+  "nim": "admin123",
+  "username": "admin",
+  "password": "admin123",
+  "isAdmin": true
+}
+
+### Login User
+POST {{baseUrl}}/login
+Content-Type: application/json
+
+{
+  "nim": "123456789",
+  "password": "password123"
+}
+
+### Login Admin
+POST {{baseUrl}}/login
+Content-Type: application/json
+
+{
+  "nim": "admin123",
+  "password": "admin123"
+}
+
+### Get User Profile
+GET {{baseUrl}}/profile
+Authorization: Bearer {{accessToken}}
+
+### Update Profile
+PUT {{baseUrl}}/profile
+Authorization: Bearer {{accessToken}}
+Content-Type: application/json
+
+{
+  "username": "newusername"
+}
+
+### Refresh Token
+POST {{baseUrl}}/refresh-token
+Content-Type: application/json
+
+{
+  "refreshToken": "{{refreshToken}}"
+}
+
+### Get All Users (Admin Only)
+GET {{baseUrl}}/
+Authorization: Bearer {{adminAccessToken}}
+
+### Get User by ID (Admin Only)
+GET {{baseUrl}}/1
+Authorization: Bearer {{adminAccessToken}}
