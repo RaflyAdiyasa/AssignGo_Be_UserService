@@ -8,5 +8,24 @@
     "pg": "^8.16.0",
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.37.7"
-  }
+  },
+  "name": "userservice",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RaflyAdiyasa/AssignGo_Be_UserService.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RaflyAdiyasa/AssignGo_Be_UserService/issues"
+  },
+  "homepage": "https://github.com/RaflyAdiyasa/AssignGo_Be_UserService#readme",
+  "description": ""
 }
